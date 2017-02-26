@@ -30,7 +30,15 @@ $navbar-default-bg: #08088A;
     background-size: cover;
     height: 400px;
 }
+.article_actions {
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px ;
+}
 
+.description {
+    margin-top: 0px;
+    color: black; 
+}
 footer {
     text-align:center;
     border-top: solid 1px #eaeaea;
@@ -38,4 +46,8 @@ footer {
 
 footer ul{
     list-style: none;
+}
+h4 { 
+    
+    color: black;
 }
