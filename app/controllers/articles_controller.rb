@@ -3,7 +3,14 @@ class ArticlesController < ApplicationController
    
    def index
        @articles = Article.all
+     
+          if params[:search]
+            @articles = Article.search(params[:search]).order("title ASC")
+            else
+            @articles = Article.all.order("title ASC")
+          end
    end
+
    
    
     def new
