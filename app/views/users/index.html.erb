@@ -11,6 +11,9 @@
                 </li>
                 <li><small>
                     <%= pluralize(user.articles.count, "article") if user.articles %>
+                    <% if logged_in? && current_user.admin? %>
+                    <li><%= link_to "delete user", user_path(user), method: :destroy, data: {confirm: "Are you sure"} %></li>
+                    <% end %>
                 </small></li>
             </div>
         </div>
